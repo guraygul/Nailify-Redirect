@@ -21,7 +21,7 @@
 
         .speech-bubble-container {
             position: absolute;
-            top: 20px;
+            top: 36px;
             right: 20px;
             max-width: calc(100% - 40px);
             width: 100%;
@@ -36,17 +36,17 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Pointer pointing to top right */
+        /* Pointer pointing to top right, extending all the way to top */
         .speech-bubble::before {
             content: '';
             position: absolute;
-            top: -15px;
+            top: -36px;
             right: 30px;
             width: 0;
             height: 0;
             border-left: 15px solid transparent;
             border-right: 15px solid transparent;
-            border-bottom: 15px solid #F5F5DC;
+            border-bottom: 36px solid #F5F5DC;
         }
 
         .speech-bubble-content {
@@ -106,7 +106,7 @@
 
         @media (max-width: 480px) {
             .speech-bubble-container {
-                top: 15px;
+                top: 36px;
                 right: 15px;
                 max-width: calc(100% - 30px);
             }
@@ -122,11 +122,11 @@
             }
 
             .speech-bubble::before {
+                top: -36px;
                 right: 20px;
-                top: -12px;
                 border-left-width: 12px;
                 border-right-width: 12px;
-                border-bottom-width: 12px;
+                border-bottom-width: 36px;
             }
 
             .tiktok-logo,
