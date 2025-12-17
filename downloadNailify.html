@@ -34,17 +34,6 @@
             padding: 20px;
             position: relative;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .speech-bubble:hover {
-            transform: scale(1.02);
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
-        }
-
-        .speech-bubble:active {
-            transform: scale(0.98);
         }
 
         /* Pointer pointing to top right */
@@ -58,12 +47,6 @@
             border-left: 15px solid transparent;
             border-right: 15px solid transparent;
             border-bottom: 15px solid #F5F5DC;
-        }
-
-        .speech-bubble-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
         }
 
         .speech-bubble-content {
@@ -116,9 +99,20 @@
             line-height: 1;
         }
 
-        .highlight {
+        .highlight-link {
             color: #FF00FF;
             font-weight: 600;
+            text-decoration: underline;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+
+        .highlight-link:hover {
+            opacity: 0.8;
+        }
+
+        .highlight-link:active {
+            opacity: 0.6;
         }
 
         @media (max-width: 480px) {
@@ -168,16 +162,11 @@
 </head>
 <body>
     <div class="speech-bubble-container">
-        <a href="https://apps.apple.com/tr/app/nailify-nail-design-ai-nails/id6754559788" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           class="speech-bubble-link">
-            <div class="speech-bubble">
-                <div class="speech-bubble-content">
-                    On <span class="tiktok-logo"></span> you need to tap on the <span class="three-dots-icon"></span> and then tap on <span class="highlight">'Open in browser'</span> to download the app for free.
-                </div>
+        <div class="speech-bubble">
+            <div class="speech-bubble-content">
+                On <span class="tiktok-logo"></span> you need to tap on the <span class="three-dots-icon"></span> and then tap on <a href="https://apps.apple.com/tr/app/nailify-nail-design-ai-nails/id6754559788" target="_blank" rel="noopener noreferrer" class="highlight-link">'Open in browser'</a> to download the app for free.
             </div>
-        </a>
+        </div>
     </div>
 </body>
 </html>
